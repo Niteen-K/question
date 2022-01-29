@@ -1,44 +1,69 @@
-import { Button, IconButton, InputBase, Paper, Typography } from "@mui/material";
+import { Button, Fab, IconButton, InputBase, Paper, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import Divider from '@mui/material/Divider';
-import React from "react";
+import React, { useState } from "react";
 
 function SearchPage() {
+
+  const [search, setSearch] = useState({
+    title: ""
+  });
+
+  function handleSearch(event) {
+    const { name, value } = event.target;
+    setSearch(() => {
+      return {
+        [name]: value
+      };
+    });
+  }
+
+  function handleClick(event) {
+    setSearch({
+      title: ""
+    });
+  }
+
   return (
+
     <div>
-      <div>
-        <Typography
-          align="center"
-          variant="h3"
-        >
-          Matrix Problems
-        </Typography>
-        <Typography
-          align="center"
-          variant="body1"
-        >
-          Topics/Matrix
-        </Typography>
-      </div>
-      <div>
-        <Paper
-          component="form"
-          sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, marginLeft: 68, marginTop: 30 }}
-        >
-          <IconButton>
-            <SearchIcon />
-          </IconButton>
-          <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-          <InputBase
-            sx={{ width: 400 }}
-            placeholder="Search Problem"
-            color="#212121"
-          />
-          <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-          <Button>Reset</Button>
-        </Paper>
-      </div>
-    </div>
+      <Typography
+        sx={{ textAlign: 'center', mt: 25 }}
+        variant="h3"
+      >
+        Matrix Problems
+      </Typography>
+      <Typography
+        sx={{ textAlign: 'center' }}
+      >
+        Topics/<b>Matrix</b>
+      </Typography>
+
+      <Paper
+        component="form"
+        elevation={16}
+        sx={{ p: '2px 4px', mt: 2, display: 'flex', width: 600, marginLeft: 56 }}
+
+      >
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+        <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+        <InputBase
+          name="title"
+          sx={{ width: 600 }}
+          onChange={handleSearch}
+          placeholder="Search Problem"
+          color="#212121"
+          value={search.title}
+        />
+        <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+        <Button
+          onClick={handleClick}
+        >Reset</Button>
+      </Paper>
+    </div >
+
   );
 }
 export default SearchPage;
