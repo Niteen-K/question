@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import BackdropFilter from "react-backdrop-filter";
 
-function Card() {
+function CardPattern() {
   return (
     <div>
       <div>
@@ -106,4 +106,4 @@ function Card() {
     </div>
   );
 }
-export default Card;
+export default CardPattern;
