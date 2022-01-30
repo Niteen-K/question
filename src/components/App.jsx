@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div>
-      <CardPattern />
+      {/* <CardPattern /> */}
       {/* <SearchPage /> */}
-      {/* <ProblemsList /> */}
+      <ProblemsList />
     </div >
   )
 }

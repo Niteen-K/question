@@ -1,27 +1,25 @@
 import React from "react";
-import { Box, Divider, TableCell, TableContainer, TableHead, TableRow, Table, Paper } from "@mui/material";
+import { Box, Divider, Paper, Typography } from "@mui/material";
+import { } from "@mui/icons-material";
+import { height } from "@mui/system";
 
 function ProblemsList() {
+
+
   return (
     <div>
-      <div>
-        <TableContainer component={Paper}
-          sx={{ width: 800 }}
-          elevation={12}
-        >
-          <Table sx={{}}
-            size="small"
-            stickyHeader
-          >
-            <TableHead>
-              <TableRow>
-                <TableCell>Item</TableCell>
-                <TableCell align="left" >Item</TableCell>
-              </TableRow>
-            </TableHead>
-          </Table>
-        </TableContainer>
-      </div>
+      <Box
+        component={Paper}
+        elevation={12}
+        sx={{
+          width: "50%"
+        }}
+      >
+        <Typography>
+          Item No.
+        </Typography>
+        <Divider />
+      </Box>
     </div>
   );
 }
