@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import { } from "@mui/icons-material";
-import { height } from "@mui/system";
 
 function ProblemsList() {
 
@@ -10,15 +9,46 @@ function ProblemsList() {
     <div>
       <Box
         component={Paper}
-        elevation={12}
+        elevation={2}
         sx={{
-          width: "50%"
+          width: 700,
+          height: 40,
+          alignItems: 'center'
         }}
       >
-        <Typography>
-          Item No.
+        <Typography
+          variant="body1"
+          display={"inline-"}
+          flex={"wrap"}
+        >
+          ID
         </Typography>
-        <Divider />
+        <Divider orientation="vertical" flexItem >
+          here
+        </Divider>
+        <Typography
+          variant="body1"
+          display={"inline-flex"}
+          flex={"wrap"}
+        >
+          Question(s)
+        </Typography>
+
+        <Typography
+          display={"inline-flex"}
+          flex={"wrap"}
+          variant="body1"
+        >
+          Status
+        </Typography>
+
+        <Typography
+          variant="body1"
+          display={"inline-flex"}
+          flex={"wrap"}
+        >
+          Done
+        </Typography>
       </Box>
     </div>
   );
