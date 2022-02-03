@@ -1,8 +1,7 @@
 import React from "react";
-import { Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Checkbox, Typography, Button, IconButton, Divider, InputBase } from "@mui/material";
+import { Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Checkbox, Typography, Button, IconButton, Divider, InputBase, Box } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
-import Background from '../Images/dsabg.jpg';
 
 function ProblemsList() {
 
@@ -38,20 +37,20 @@ function ProblemsList() {
       </div>
       <div style={{ marginTop: '2%' }}>
         <Paper component='div' elevation='2' sx={{ width: '70%', overflow: 'hidden', margin: 'auto' }}>
-          <TableContainer sx={{ maxHeight: 440 }}>
+          <TableContainer sx={{ maxHeight: 440, backgroundColor: '#455a64', }}>
             <Table stickyHeader >
-              <TableHead>
-                <TableRow>
-                  <TableCell align="center" >
+              <TableHead >
+                <TableRow >
+                  <TableCell align="center" sx={{ backgroundColor: '#37474f', color: 'white' }}  >
                     ID
                   </TableCell>
-                  <TableCell align="center" >
+                  <TableCell align="center" sx={{ backgroundColor: '#37474f', color: 'white' }}>
                     Question(s)
                   </TableCell>
-                  <TableCell align="center" >
+                  <TableCell align="center" sx={{ backgroundColor: '#37474f', color: 'white' }}>
                     Status
                   </TableCell>
-                  <TableCell align="center" >
+                  <TableCell align="center" sx={{ backgroundColor: '#37474f', color: 'white' }}>
                     Done
                   </TableCell>
                 </TableRow>
