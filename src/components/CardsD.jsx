@@ -14,7 +14,7 @@ function CardsD() {
           },
         }]}  >
         <Card sx={[{
-          width: 230, height: 300, backgroundColor: "#e0e0e0", cursor: "pointer",
+          width: 230, height: 300, background: 'linear-gradient(25deg, #b380b9 30%, #7575b8 90%)', color: 'black', cursor: "pointer",
         },]}>
 
           <CardMedia
@@ -26,7 +26,7 @@ function CardsD() {
             component="img"
             image={require("../Images/structureddata.png")}
           />
-          <CardContent>
+          <CardContent sx={{ background: 'linear-gradient(45deg, #b380b9 30%, #7575b8 90%)', color: 'black' }} >
             <Typography variant="h5">Valorant</Typography>
             <Typography variant="body1">Kills</Typography>
             <Typography variant="body2" color="red" >Play!</Typography>
